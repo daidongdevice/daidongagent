@@ -1,0 +1,34 @@
+[
+  {
+    "role": "user",
+    "content": "xin chao, ban la ai, dang su dung model gi?"
+  },
+  {
+    "role": "assistant",
+    "content": "Chào bạn! 👋\n\nMình là **Hermes Agent** - một trợ lý AI thông minh được tạo ra bởi **Nous Research**.\n\nHiện tại mình đang sử dụng model: **DeepSeek V4 Flash** (thông qua provider tùy chỉnh).\n\nMình có thể giúp bạn với nhiều việc như:\n- Trả lời câu hỏi\n- Viết và sửa code\n- Phân tích thông tin\n- Làm việc sáng tạo (viết lách, tạo hình ảnh)\n- Thực thi các tác vụ trên hệ thống\n\nCó gì mình có thể giúp bạn hôm nay không? 😊"
+  },
+  {
+    "role": "user",
+    "content": "Chao ban, ban la ai? Tra loi ngan gon 1 dong."
+  },
+  {
+    "role": "assistant",
+    "content": "Chào bạn! Mình là **Hermes Agent** từ Nous Research, đang chạy model DeepSeek V4 Flash. 😊"
+  },
+  {
+    "role": "user",
+    "content": "Chao ban, ban la ai? Tra loi ngan gon 1 dong."
+  },
+  {
+    "role": "assistant",
+    "content": "Chào bạn! Mình là **Hermes Agent** từ Nous Research, đang chạy model DeepSeek V4 Flash. 😊"
+  },
+  {
+    "role": "user",
+    "content": "hello who are you, 1 short sentence"
+  },
+  {
+    "role": "assistant",
+    "content": "Hello! I'm **Hermes Agent** from Nous Research, running DeepSeek V4 Flash. 😊"
+  }
+]

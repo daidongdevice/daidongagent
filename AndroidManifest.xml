@@ -1,0 +1,31 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.daidong.hermesstandalone"
+    android:versionCode="7"
+    android:versionName="0.7.0-daidongagent">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="moe.shizuku.manager.permission.API_V23" />
+    <application
+        android:label="DaidongAgent"
+        android:debuggable="true"
+        android:allowBackup="false"
+        android:supportsRtl="true">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service
+            android:name=".ShizukuUserService"
+            android:exported="true"
+            android:permission="moe.shizuku.manager.permission.API_V23" />
+        <provider
+            android:name="rikka.shizuku.ShizukuProvider"
+            android:authorities="com.daidong.hermesstandalone.shizuku"
+            android:exported="true"
+            android:multiprocess="false" />
+    </application>
+</manifest>

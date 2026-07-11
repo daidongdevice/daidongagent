@@ -1,0 +1,7 @@
+{
+  "provider": "custom:9router",
+  "model": "ds/deepseek-v4-flash",
+  "base_url": "http://127.0.0.1:20128/v1",
+  "toolsets": "safe",
+  "history_turns": 8
+}

@@ -1,0 +1,29 @@
+model:
+  default: ds/deepseek-v4-flash
+  provider: custom:9router
+providers:
+  9router:
+    name: 9Router Local
+    base_url: http://127.0.0.1:20128/v1
+    key_env: NINE_ROUTER_API_KEY
+    default_model: ds/deepseek-v4-flash
+    transport: chat_completions
+approvals:
+  mode: off
+toolsets:
+  - safe
+agent:
+  max_turns: 20
+  tool_use_enforcement: auto
+terminal:
+  backend: local
+  cwd: /data/data/com.termux/files/home/hermes-android-standalone/hermes-home
+  timeout: 60
+memory:
+  memory_enabled: false
+  user_profile_enabled: false
+display:
+  interface: cli
+  tool_progress: off
+security:
+  redact_secrets: true
