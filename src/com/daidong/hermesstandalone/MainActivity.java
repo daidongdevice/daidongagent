@@ -695,7 +695,9 @@ public class MainActivity extends Activity {
         ProcessBuilder pb = new ProcessBuilder(args);
         pb.directory(rt);
         pb.environment().put("LD_LIBRARY_PATH", new File(rt, "lib").getAbsolutePath());
-        pb.environment().put("LD_PRELOAD", new File(rt, "lib/libpython3.13.so").getAbsolutePath());
+        // Do NOT set LD_PRELOAD — it causes Permission denied on Android/APK.
+        // The bundled Python loads libpython3.13.so via DT_NEEDED when LD_LIBRARY_PATH is set.
+        pb.environment().remove("LD_PRELOAD");
         pb.environment().put("PYTHONHOME", rt.getAbsolutePath());
         String paths = new File(rt, "lib/python3.13").getAbsolutePath() + ":" +
                        new File(rt, "lib/python3.13/site-packages").getAbsolutePath() + ":" +
@@ -705,6 +707,7 @@ public class MainActivity extends Activity {
         pb.environment().put("HOME", getHermesHomeDir().getAbsolutePath());
         pb.environment().put("NO_COLOR", "1");
         pb.environment().put("HERMES_TUI", "0");
+        // API keys are injected via Android app settings dialog or bridge_settings.json
         return pb;
     }
 
